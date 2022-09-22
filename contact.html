@@ -145,7 +145,7 @@
           </div>
           <div class="row justify-content-center">
             <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.3s">
-              <form onSubmit="sendEmail(); reset(); return false;">
+              <form action="" id="contactForm">
                 <div class="row g-3">
                   <div class="col-md-6">
                     <div class="form-floating">
@@ -202,22 +202,10 @@
           </div>
         </div>
       </div>
-      <script src="https://smtpjs.com/v3/smtp.js"></script>
-      <script>
-        function sendEmail(){
-          Email.send({
-    Host : "smtp.gmail.com",
-    Username : "hinastaffing@gmail.com",
-    Password : "amit@12213",
-    To : 'info@kredllc.com',
-    From : document.getElementById("email").value,
-    Subject : "New Enquiry",
-    Body : "And this is the body"
-}).then(
-  message => alert(message)
-);
-        }
-      </script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+      <script src="./js/mail.js"></script>
+
       <!-- Contact End -->
 
       <!-- Footer Start -->
@@ -231,9 +219,9 @@
             <div class="col-md-6 col-lg-3">
               <h5 class="text-white mb-4">Get In Touch</h5>
               <p><i class="fa fa-map-marker-alt me-3"></i>RigdeWood NewYork</p>
-              <p><i class="fa fa-phone-alt me-3"></i>
+              <p>
+                <i class="fa fa-phone-alt me-3"></i>
                 <a href="tel:{phone}">+1-319-727-6453</a>
-
               </p>
               <p><i class="fa fa-envelope me-3"></i>info@kredllc.com</p>
               <div class="d-flex pt-2">
@@ -246,7 +234,9 @@
                 <a class="btn btn-outline-light btn-social" href=""
                   ><i class="fab fa-youtube"></i
                 ></a>
-                <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/kred-staffing-llc/"
+                <a
+                  class="btn btn-outline-light btn-social"
+                  href="https://www.linkedin.com/company/kred-staffing-llc/"
                   ><i class="fab fa-linkedin-in"></i
                 ></a>
               </div>
