@@ -119,9 +119,8 @@
 
 .alert{
     text-align: center;
-    background:#741d2c;
     padding:10px;
-    color:#fff;
+    color:rgb(26, 134, 223);
     margin-bottom: 10px;
     display:none;
 }
